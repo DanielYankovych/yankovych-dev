@@ -25,10 +25,6 @@ export const metadata = {
       "Senior Front-End Developer specializing in React, Next.js, JavaScript/TypeScript, and high-performance user interfaces. Building modern, scalable products with clean architecture and a strong UI/UX focus.",
     images: ["/og-logo.png"],
   },
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#000000" },
-  ],
 };
 
 export default function RootLayout({ children }) {
