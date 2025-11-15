@@ -30,21 +30,3 @@ body {
 * {
   box-sizing: border-box;
 }
-
-@keyframes flipLetter {
-  0% {
-    opacity: 0;
-    transform: translateY(20px) rotateX(90deg);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(0) rotateX(0deg);
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.animate-letter-flip {
-  animation: flipLetter 2s infinite ease-in-out;
-}
