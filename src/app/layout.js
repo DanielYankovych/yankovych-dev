@@ -1,10 +1,13 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/header";
+import localFont from "next/font/local";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+const fixelBold = localFont({
+  src: "./fonts/fixel/FixelDisplay-Bold.woff2",
+  variable: "--font-fixel-bold",
+});
+const fixelExtraBold = localFont({
+  src: "./fonts/fixel/FixelDisplay-ExtraBold.woff2",
+  variable: "--font-fixel-extra-bold",
 });
 
 export const metadata = {
@@ -31,8 +34,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>
-        <Header />
+      <body
+        className={`${fixelBold.variable} ${fixelExtraBold.variable} antialiased`}
+      >
         {children}
       </body>
     </html>

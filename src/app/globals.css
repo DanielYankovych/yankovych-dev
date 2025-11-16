@@ -2,18 +2,20 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #111111;
+  --foreground: #000000;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-inter: var(--font-inter);
+  --font-fixel-bold: var(--font-fixel-bold);
+  --font-fixel-extra-bold: var(--font-fixel-extra-bold);
+  --color-red-500: oklch(0.5122 0.1786 26.25);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #111111;
+    --background: #000000;
     --foreground: #ffffff;
   }
 }
