@@ -1,5 +1,11 @@
+import { Inter } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
 
 const fixelBold = localFont({
   src: "./fonts/fixel/FixelDisplay-Bold.woff2",
@@ -35,7 +41,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${fixelBold.variable} ${fixelExtraBold.variable} antialiased`}
+        className={`${inter.variable} antialiased ${fixelBold.variable} ${fixelExtraBold.variable}`}
       >
         {children}
       </body>
