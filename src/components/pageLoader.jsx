@@ -26,7 +26,7 @@ export const PageLoader = ({ onExpand }) => {
         .to(boxRef.current, {
           scale: 30,
           rotate: 0,
-          duration: 1.2,
+          duration: 3,
           ease: "power4.inOut",
           onComplete: () => {
             if (onExpand) onExpand();

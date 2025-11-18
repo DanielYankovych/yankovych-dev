@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useLayoutEffect, useRef } from "react";
-import { WORK_WAY } from "@/data";
+import { GITHUB_LINK, WORK_WAY } from "@/data";
 import gsap from "gsap";
 import { Button } from "@/components/button";
 
@@ -89,7 +89,10 @@ export const WorkWay = () => {
           <div className="text-red-500 text-xl md:text-[3vw] mb-4">
             Check my
           </div>
-          <Button classNames="!text-gray-500 text-3xl md:text-[6vw] px-10 leading-none">
+          <Button
+            href={GITHUB_LINK}
+            classNames="!text-gray-500 text-3xl md:text-[6vw] px-10 leading-none"
+          >
             Github
           </Button>
         </div>

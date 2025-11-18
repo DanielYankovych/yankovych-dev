@@ -1,13 +1,23 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Title } from "@/components/title";
 import { PageLoader } from "@/components/pageLoader";
 import { TechStack } from "@/components/techStack";
 import { WorkWay } from "@/components/workWay";
+import { GetInTouch } from "@/components/getInTouch";
+
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Home() {
-  const titleRef = useRef();
+  const titleSectionRef = useRef(null);
+  const techStackSectionRef = useRef(null);
+  const workWaySectionRef = useRef(null);
+  const contactSectionRef = useRef(null);
+  const titleRef = useRef(null);
+
+  const [loaderDone, setLoaderDone] = useState(false);
 
   useEffect(() => {
     if ("scrollRestoration" in window.history) {
@@ -17,19 +27,84 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, []);
 
+  useLayoutEffect(() => {
+    if (!loaderDone) return;
+
+    const ctx = gsap.context(() => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const setBg = (color) => {
+        gsap.to("body", {
+          backgroundColor: color,
+          duration: 1,
+          ease: "power2.out",
+        });
+      };
+
+      ScrollTrigger.create({
+        trigger: titleSectionRef.current,
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: () => setBg("#000"),
+        onEnterBack: () => setBg("#000"),
+      });
+
+      ScrollTrigger.create({
+        trigger: techStackSectionRef.current,
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: () => setBg("#fff"),
+        onEnterBack: () => setBg("#fff"),
+      });
+
+      ScrollTrigger.create({
+        trigger: workWaySectionRef.current,
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: () => setBg("#fff"),
+        onEnterBack: () => setBg("#fff"),
+      });
+
+      ScrollTrigger.create({
+        trigger: contactSectionRef.current,
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: () => setBg("#000"),
+        onEnterBack: () => setBg("#000"),
+      });
+    });
+
+    return () => ctx.revert();
+  }, [loaderDone]);
+
   return (
     <>
       <PageLoader
         onExpand={() => {
           titleRef.current.animate();
+          setLoaderDone(true);
         }}
       />
       <div className="w-full h-auto font-fixel-extra-bold uppercase">
-        <div className="w-full h-dvh p-4 md:p-8">
+        <div ref={titleSectionRef} className="w-full h-dvh p-4 md:p-8">
           <Title ref={titleRef} />
         </div>
-        <TechStack />
-        <WorkWay />
+
+        <div ref={techStackSectionRef}>
+          <TechStack />
+        </div>
+
+        <div ref={workWaySectionRef}>
+          <WorkWay />
+        </div>
+
+        <div
+          ref={contactSectionRef}
+          className="w-full h-dvh p-4 md:px-8 md:py-4"
+          id="get-in-touch"
+        >
+          <GetInTouch />
+        </div>
       </div>
     </>
   );

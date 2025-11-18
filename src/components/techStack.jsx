@@ -20,30 +20,6 @@ export const TechStack = () => {
     const ctx = gsap.context(() => {
       gsap.registerPlugin(ScrollTrigger);
 
-      ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: "top 30%",
-        onEnter: () => {
-          gsap.to("body", {
-            backgroundColor: "#ffffff",
-            duration: 1,
-            ease: "power2.out",
-          });
-        },
-      });
-
-      ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: "top 60%",
-        onLeaveBack: () => {
-          gsap.to("body", {
-            backgroundColor: "#000000",
-            duration: 1,
-            ease: "power2.out",
-          });
-        },
-      });
-
       gsap.fromTo(
         paragraphRef.current,
         { y: 50, opacity: 0 },
@@ -97,46 +73,52 @@ export const TechStack = () => {
 
       gsap.fromTo(
         frameworksRef.current,
-        { x: 250 },
+        { y: 150 },
         {
-          x: 0,
-          ease: "none",
+          y: 0,
+          ease: "power1.inOut",
           scrollTrigger: {
             trigger: frameworksRef.current,
             start: "top bottom",
-            end: "top 70%",
+            end: "top bottom",
             scrub: 3,
           },
+          duration: 6,
+          stagger: 3,
         },
       );
 
       gsap.fromTo(
         languagesRef.current,
-        { x: -250 },
+        { y: 150 },
         {
-          x: 0,
-          ease: "none",
+          y: 0,
+          ease: "power1.inOut",
           scrollTrigger: {
             trigger: languagesRef.current,
             start: "top bottom",
-            end: "top 70%",
+            end: "top bottom",
             scrub: 4,
           },
+          duration: 6,
+          stagger: 3,
         },
       );
 
       gsap.fromTo(
         toolsRef.current,
-        { x: 250 },
+        { y: 150 },
         {
-          x: 0,
-          ease: "none",
+          y: 0,
+          ease: "power1.inOut",
           scrollTrigger: {
             trigger: toolsRef.current,
             start: "top bottom",
-            end: "top 70%",
+            end: "top bottom",
             scrub: 5,
           },
+          duration: 6,
+          stagger: 3,
         },
       );
 
@@ -197,7 +179,7 @@ export const TechStack = () => {
         ))}
       </div>
 
-      <div className="text-gray-400 text-lg md:text-[1vw] leading-none -ml-[0.05em] md:ml-[24.5vw] my-12">
+      <div className="text-gray-400 text-lg md:text-[1vw] leading-none -ml-[0.05em] md:ml-[24.5vw] mt-24 mb-12">
         Programming languages
       </div>
       <div className="w-full flex justify-between md:justify-center items-start gap-6 md:gap-[6vw]">
@@ -218,7 +200,7 @@ export const TechStack = () => {
         ))}
       </div>
 
-      <div className="text-gray-400 text-lg md:text-[1vw] leading-none -ml-[0.05em] md:ml-[24.5vw] my-12">
+      <div className="text-gray-400 text-lg md:text-[1vw] leading-none -ml-[0.05em] md:ml-[24.5vw] mt-24 mb-12">
         Tools
       </div>
       <div className="w-full flex justify-between md:justify-center items-start gap-6 md:gap-[6vw]">

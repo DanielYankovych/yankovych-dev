@@ -30,7 +30,9 @@ export const Title = forwardRef((props, ref) => {
       className="size-full flex flex-col justify-between opacity-0"
     >
       <div className="w-full flex justify-end items-center h-10">
-        <Button classNames="max-w-40 w-full">Get in touch</Button>
+        <Button href="#get-in-touch" classNames="max-w-40 w-full">
+          Get in touch
+        </Button>
       </div>
       <div className="w-full flex flex-col">
         {TITLE.map((title, idx) => (
