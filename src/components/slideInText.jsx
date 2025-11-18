@@ -7,6 +7,7 @@ export default function SlideInText({
   direction = "left", // "left" | "right" | "top" | "bottom"
   delay = 0,
   classNames,
+  ...props
 }) {
   const [show, setShow] = useState(false);
   const ref = useRef(null);
@@ -66,6 +67,7 @@ export default function SlideInText({
           opacity 0.9s cubic-bezier(.16,1,.3,1) ${delay}s
         `,
       }}
+      {...props}
     >
       {children}
     </div>
