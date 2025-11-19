@@ -12,8 +12,13 @@ export const TechStack = () => {
   const paragraphRef = useRef(null);
   const techStackRef = useRef(null);
 
+  const frameworksListRef = useRef(null);
   const frameworksRef = useRef([]);
+
+  const languagesListRef = useRef(null);
   const languagesRef = useRef([]);
+
+  const toolsListRef = useRef(null);
   const toolsRef = useRef([]);
 
   useLayoutEffect(() => {
@@ -22,10 +27,9 @@ export const TechStack = () => {
 
       gsap.fromTo(
         paragraphRef.current,
-        { y: 50, opacity: 0 },
+        { y: 80 },
         {
           y: 0,
-          opacity: 1,
           duration: 2,
           ease: "power3.out",
           scrollTrigger: {
@@ -36,7 +40,7 @@ export const TechStack = () => {
       );
 
       gsap.to(paragraphRef.current, {
-        yPercent: -50,
+        yPercent: -80,
         ease: "none",
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -48,7 +52,7 @@ export const TechStack = () => {
 
       gsap.fromTo(
         techStackRef.current,
-        { y: 50 },
+        { y: 80 },
         {
           y: 0,
           duration: 2,
@@ -61,7 +65,7 @@ export const TechStack = () => {
       );
 
       gsap.to(techStackRef.current, {
-        yPercent: -50,
+        yPercent: -80,
         ease: "none",
         scrollTrigger: {
           trigger: techStackRef.current,
@@ -78,9 +82,9 @@ export const TechStack = () => {
           y: 0,
           ease: "power1.inOut",
           scrollTrigger: {
-            trigger: frameworksRef.current,
+            trigger: frameworksListRef.current,
             start: "top bottom",
-            end: "top bottom",
+            end: "bottom bottom",
             scrub: 3,
           },
           duration: 6,
@@ -95,9 +99,9 @@ export const TechStack = () => {
           y: 0,
           ease: "power1.inOut",
           scrollTrigger: {
-            trigger: languagesRef.current,
+            trigger: languagesListRef.current,
             start: "top bottom",
-            end: "top bottom",
+            end: "bottom bottom",
             scrub: 4,
           },
           duration: 6,
@@ -112,9 +116,9 @@ export const TechStack = () => {
           y: 0,
           ease: "power1.inOut",
           scrollTrigger: {
-            trigger: toolsRef.current,
+            trigger: toolsListRef.current,
             start: "top bottom",
-            end: "top bottom",
+            end: "bottom bottom",
             scrub: 5,
           },
           duration: 6,
@@ -138,7 +142,7 @@ export const TechStack = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full p-4 md:px-8 md:py-20">
+    <div ref={sectionRef} className="w-full">
       <div
         ref={paragraphRef}
         className="indent-20 md:ml-[24.5vw] md:mr-[11vw] text-red-500 text-xl md:text-[3vw] leading-tight"
@@ -150,15 +154,18 @@ export const TechStack = () => {
 
       <div
         ref={techStackRef}
-        className="text-gray-500 text-3xl md:text-[6vw] leading-none -ml-[0.05em] my-12"
+        className="text-gray-500 text-3xl md:text-[6vw] leading-none -ml-[0.05em] my-32"
       >
         My tech stack
       </div>
 
-      <div className="text-gray-400 text-lg md:text-[1vw] leading-none -ml-[0.05em] md:ml-[24.5vw] mb-12">
+      <div className="text-gray-400 text-lg md:text-[1vw] leading-none -ml-[0.05em] md:ml-[24.5vw] pb-12">
         Frameworks
       </div>
-      <div className="w-full flex justify-between md:justify-center items-start gap-6 md:gap-[6vw]">
+      <div
+        ref={frameworksListRef}
+        className="w-full flex justify-between md:justify-center items-start gap-6 md:gap-[6vw]"
+      >
         {FRAMEWORKS.map((framework, idx) => (
           <div
             key={idx}
@@ -179,10 +186,13 @@ export const TechStack = () => {
         ))}
       </div>
 
-      <div className="text-gray-400 text-lg md:text-[1vw] leading-none -ml-[0.05em] md:ml-[24.5vw] mt-24 mb-12">
+      <div className="text-gray-400 text-lg md:text-[1vw] leading-none -ml-[0.05em] md:ml-[24.5vw] pt-32 pb-12">
         Programming languages
       </div>
-      <div className="w-full flex justify-between md:justify-center items-start gap-6 md:gap-[6vw]">
+      <div
+        ref={languagesListRef}
+        className="w-full flex justify-between md:justify-center items-start gap-6 md:gap-[6vw]"
+      >
         {PROGRAMMING_LANGUAGES.map((language, idx) => (
           <div
             key={idx}
@@ -200,10 +210,13 @@ export const TechStack = () => {
         ))}
       </div>
 
-      <div className="text-gray-400 text-lg md:text-[1vw] leading-none -ml-[0.05em] md:ml-[24.5vw] mt-24 mb-12">
+      <div className="text-gray-400 text-lg md:text-[1vw] leading-none -ml-[0.05em] md:ml-[24.5vw] pt-32 pb-12">
         Tools
       </div>
-      <div className="w-full flex justify-between md:justify-center items-start gap-6 md:gap-[6vw]">
+      <div
+        ref={toolsListRef}
+        className="w-full flex justify-between md:justify-center items-start gap-6 md:gap-[6vw]"
+      >
         {TOOLS.map((tool, idx) => (
           <div
             key={idx}

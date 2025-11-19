@@ -43,32 +43,32 @@ export default function Home() {
 
       ScrollTrigger.create({
         trigger: titleSectionRef.current,
-        start: "top 50%",
-        end: "bottom 50%",
+        start: "top center",
+        end: "bottom center",
         onEnter: () => setBg("#000"),
         onEnterBack: () => setBg("#000"),
       });
 
       ScrollTrigger.create({
         trigger: techStackSectionRef.current,
-        start: "top 50%",
-        end: "bottom 50%",
+        start: "top center",
+        end: "bottom center",
         onEnter: () => setBg("#fff"),
         onEnterBack: () => setBg("#fff"),
       });
 
       ScrollTrigger.create({
         trigger: workWaySectionRef.current,
-        start: "top 50%",
-        end: "bottom 50%",
+        start: "top center",
+        end: "bottom center",
         onEnter: () => setBg("#fff"),
         onEnterBack: () => setBg("#fff"),
       });
 
       ScrollTrigger.create({
         trigger: contactSectionRef.current,
-        start: "top 50%",
-        end: "bottom 50%",
+        start: "top center",
+        end: "bottom center",
         onEnter: () => setBg("#000"),
         onEnterBack: () => setBg("#000"),
       });
@@ -90,11 +90,14 @@ export default function Home() {
           <Title ref={titleRef} />
         </div>
 
-        <div ref={techStackSectionRef}>
+        <div
+          ref={techStackSectionRef}
+          className="p-4 md:px-8 md:pt-40 md:pb-32"
+        >
           <TechStack />
         </div>
 
-        <div ref={workWaySectionRef}>
+        <div ref={workWaySectionRef} className="p-4 md:p-8">
           <WorkWay />
         </div>
 

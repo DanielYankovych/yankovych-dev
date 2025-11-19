@@ -29,9 +29,9 @@ export const GetInTouch = () => {
   return (
     <div
       ref={sectionRef}
-      className="size-full flex flex-col justify-end text-right gap-20"
+      className="size-full flex flex-col justify-end items-start"
     >
-      <div className="flex justify-end items-center">
+      <div className="flex flex-col justify-start items-end gap-20">
         <div className="flex flex-col justify-center items-center gap-10">
           <Link
             href="/cv/frontend-cv.pdf"
@@ -49,9 +49,9 @@ export const GetInTouch = () => {
             </Button>
           </div>
         </div>
-      </div>
-      <div className="text-red-500 text-6xl md:text-[12vw] -mr-[0.06em]">
-        Get in touch
+        <div className="text-red-500 text-6xl md:text-[12vw] -mr-[0.06em]">
+          Get in touch
+        </div>
       </div>
     </div>
   );

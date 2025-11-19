@@ -25,7 +25,7 @@ export const Button = ({ href, classNames, children }) => {
       onClick={handleClick}
       className={classnames(
         "text-white uppercase py-1 border-2 rounded-full text-lg md:text-xl font-fixel-bold text-center",
-        "hover:bg-red-500 hover:border-red-500 transition-all ease-in-out duration-200",
+        "hover:bg-red-500 hover:border-red-500 hover:!text-white transition-all ease-in-out duration-200",
         classNames,
       )}
     >

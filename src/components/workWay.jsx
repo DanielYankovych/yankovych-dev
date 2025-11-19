@@ -15,20 +15,20 @@ export const WorkWay = () => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         textRef.current,
-        { x: 100 },
+        { y: 80 },
         {
-          x: 0,
+          y: 0,
           duration: 2,
           ease: "power3.out",
           scrollTrigger: {
             trigger: textRef.current,
-            start: "top 80%",
+            start: "top 70%",
           },
         },
       );
 
       gsap.to(textRef.current, {
-        yPercent: 50,
+        yPercent: -80,
         ease: "none",
         scrollTrigger: {
           trigger: textRef.current,
@@ -43,24 +43,44 @@ export const WorkWay = () => {
         { x: (i) => (i % 2 === 0 ? 150 : -150) },
         {
           x: 0,
-          duration: 3,
           ease: "none",
+          duration: 4,
+          stagger: 2,
           scrollTrigger: {
-            trigger: wordsRef.current,
-            start: "top 40%",
-            end: "top 80%",
+            trigger: wordsSectionRef.current,
+            start: "top bottom",
+            end: "bottom top",
             scrub: 3,
           },
-          stagger: 1,
         },
       );
+
+      gsap.to(wordsRef.current, {
+        color: (i) => "#b72929",
+        ease: "none",
+        stagger: 2,
+        scrollTrigger: {
+          trigger: wordsSectionRef.current,
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+          onUpdate: (self) => {
+            const progress = self.progress; // 0…1
+            const activeIndex = Math.floor(progress * wordsRef.current.length);
+
+            wordsRef.current.forEach((row, i) => {
+              row.style.color = i === activeIndex ? "#b72929" : "#000000";
+            });
+          },
+        },
+      });
     });
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <div ref={sectionRef} className="relative w-full p-4 md:p-8">
+    <div ref={sectionRef} className="w-full">
       <div
         ref={textRef}
         className="indent-20 md:mr-[11vw] text-black text-xl md:text-[3vw] leading-tight"
@@ -71,7 +91,7 @@ export const WorkWay = () => {
 
       <div
         ref={wordsSectionRef}
-        className="text-black text-3xl md:text-[6vw] leading-tight -ml-[0.05em] mt-32 md:ml-[24.5vw]"
+        className="text-black text-3xl md:text-[6vw] leading-tight pt-32 -ml-[0.05em] md:ml-[24.5vw]"
       >
         {WORK_WAY.map((word, idx) => (
           <div
