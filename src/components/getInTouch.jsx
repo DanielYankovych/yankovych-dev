@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { Button } from "@/components/button";
 import { EMAIL_LINK, LINKEDIN_LINK } from "@/data";
 import Link from "next/link";
+import FallingText from "@/components/FallingText";
 
 export const GetInTouch = () => {
   const sectionRef = useRef(null);
@@ -27,11 +28,8 @@ export const GetInTouch = () => {
   }, []);
 
   return (
-    <div
-      ref={sectionRef}
-      className="size-full flex flex-col justify-end items-start"
-    >
-      <div className="flex flex-col justify-start items-end gap-20">
+    <div ref={sectionRef} className="size-full relative">
+      <div className="absolute w-full bottom-1/3 left-0 flex justify-end items-center z-10">
         <div className="flex flex-col justify-center items-center gap-10">
           <Link
             href="/cv/frontend-cv.pdf"
@@ -49,10 +47,16 @@ export const GetInTouch = () => {
             </Button>
           </div>
         </div>
-        <div className="text-red-500 text-6xl md:text-[12vw] -mr-[0.06em]">
-          Get in touch
-        </div>
       </div>
+      <FallingText
+        text="Get in touch"
+        highlightClass="highlighted"
+        trigger="hover"
+        backgroundColor="transparent"
+        wireframes={false}
+        gravity={0.3}
+        mouseConstraintStiffness={0.9}
+      />
     </div>
   );
 };
