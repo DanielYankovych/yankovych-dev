@@ -3,7 +3,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Title } from "@/components/title";
 import { PageLoader } from "@/components/pageLoader";
-import { TechStack } from "@/components/techStack";
+import { TechStack } from "@/components/techStack/techStack";
 import { WorkWay } from "@/components/workWay";
 import { GetInTouch } from "@/components/getInTouch";
 

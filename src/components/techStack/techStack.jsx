@@ -1,11 +1,10 @@
 "use client";
 
-import { useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Image from "next/image";
-import classnames from "classnames";
 import { FRAMEWORKS, PROGRAMMING_LANGUAGES, TOOLS } from "@/data";
+import { TechStackBox } from "@/components/techStack/techStackBox";
 
 export const TechStack = () => {
   const sectionRef = useRef(null);
@@ -162,25 +161,17 @@ export const TechStack = () => {
       <div className="text-gray-400 text-lg md:text-[1vw] leading-none -ml-[0.05em] md:ml-[24.5vw] pb-12">
         Frameworks
       </div>
+
       <div
         ref={frameworksListRef}
         className="w-full flex justify-between md:justify-center items-start gap-6 md:gap-[6vw]"
       >
         {FRAMEWORKS.map((framework, idx) => (
-          <div
-            key={idx}
-            ref={(el) => (frameworksRef.current[idx] = el)}
-            className={classnames(
-              "w-full md:w-[9vw] aspect-square bg-gray-500 flex justify-center items-center",
-              idx === 2 ? "p-3" : "p-5",
-            )}
-          >
-            <Image
-              src={framework.logo}
-              width={110}
-              height={110}
-              alt={framework.name}
-              className="w-full h-auto"
+          <div key={idx} ref={(el) => (frameworksRef.current[idx] = el)}>
+            <TechStackBox
+              name={framework.name}
+              logo={framework.logo}
+              classNames={idx === 2 && "!p-3"}
             />
           </div>
         ))}
@@ -194,18 +185,8 @@ export const TechStack = () => {
         className="w-full flex justify-between md:justify-center items-start gap-6 md:gap-[6vw]"
       >
         {PROGRAMMING_LANGUAGES.map((language, idx) => (
-          <div
-            key={idx}
-            ref={(el) => (languagesRef.current[idx] = el)}
-            className="w-full md:w-[9vw] aspect-square bg-gray-500 flex justify-center items-center p-5"
-          >
-            <Image
-              src={language.logo}
-              width={110}
-              height={110}
-              alt={language.name}
-              className="w-full h-auto"
-            />
+          <div key={idx} ref={(el) => (languagesRef.current[idx] = el)}>
+            <TechStackBox name={language.name} logo={language.logo} />
           </div>
         ))}
       </div>
@@ -218,18 +199,8 @@ export const TechStack = () => {
         className="w-full flex justify-between md:justify-center items-start gap-6 md:gap-[6vw]"
       >
         {TOOLS.map((tool, idx) => (
-          <div
-            key={idx}
-            ref={(el) => (toolsRef.current[idx] = el)}
-            className="w-full md:w-[9vw] aspect-square bg-gray-500 flex justify-center items-center p-5"
-          >
-            <Image
-              src={tool.logo}
-              width={110}
-              height={110}
-              alt={tool.name}
-              className="w-full h-auto"
-            />
+          <div key={idx} ref={(el) => (toolsRef.current[idx] = el)}>
+            <TechStackBox name={tool.name} logo={tool.logo} />
           </div>
         ))}
       </div>
