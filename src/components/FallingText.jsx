@@ -39,7 +39,9 @@ const FallingText = ({
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
-            setEffectStarted(true);
+            setTimeout(() => {
+              setEffectStarted(true);
+            }, 1000);
             observer.disconnect();
           }
         },
@@ -203,7 +205,7 @@ const FallingText = ({
     <div
       ref={containerRef}
       className={classnames(
-        "relative z-[1] w-full h-full text-center pt-8 text-red-500 text-6xl md:text-[12vw] -mr-[0.06em]",
+        "relative z-[1] w-full h-full text-center pt-8 text-red-500 text-8xl md:text-9xl lg:text-[170px] 2xl:text-[200px] -mr-[0.06em]",
         effectStarted && "pointer-events-none",
       )}
       onClick={trigger === "click" ? handleTrigger : undefined}

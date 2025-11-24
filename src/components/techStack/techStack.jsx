@@ -144,7 +144,7 @@ export const TechStack = () => {
     <div ref={sectionRef} className="w-full">
       <div
         ref={paragraphRef}
-        className="indent-20 md:ml-[24.5vw] md:mr-[11vw] text-red-500 text-xl md:text-[3vw] leading-tight"
+        className="indent-10 md:indent-20 md:ml-[24.5vw] md:mr-[11vw] text-red-500 text-4xl md:text-[52px] leading-tight"
       >
         Every project has its own character, so I adapt my process to what it
         needs — sometimes structured and straightforward, sometimes more
@@ -153,56 +153,53 @@ export const TechStack = () => {
 
       <div
         ref={techStackRef}
-        className="text-gray-500 text-3xl md:text-[6vw] leading-none -ml-[0.05em] my-32"
+        className="text-gray-500 text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl md:-ml-1 leading-none my-6 md:my-32"
       >
         My tech stack
       </div>
 
-      <div className="text-gray-400 text-lg md:text-[1vw] leading-none -ml-[0.05em] md:ml-[24.5vw] pb-12">
+      <div className="text-gray-400 text-xl leading-none md:ml-[24.5vw]">
         Frameworks
       </div>
 
-      <div
-        ref={frameworksListRef}
-        className="w-full flex justify-between md:justify-center items-start gap-6 md:gap-[6vw]"
-      >
-        {FRAMEWORKS.map((framework, idx) => (
-          <div key={idx} ref={(el) => (frameworksRef.current[idx] = el)}>
-            <TechStackBox
-              name={framework.name}
-              logo={framework.logo}
-              classNames={idx === 2 && "!p-3"}
-            />
-          </div>
-        ))}
+      <div ref={frameworksListRef} className="w-full overflow-hidden">
+        <div className="w-auto flex justify-start md:justify-center items-start gap-6 md:gap-20 overflow-x-auto no-scrollbar py-12">
+          {FRAMEWORKS.map((framework, idx) => (
+            <div key={idx} ref={(el) => (frameworksRef.current[idx] = el)}>
+              <TechStackBox
+                name={framework.name}
+                logo={framework.logo}
+                classNames={idx === 2 && "!p-3"}
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
-      <div className="text-gray-400 text-lg md:text-[1vw] leading-none -ml-[0.05em] md:ml-[24.5vw] pt-32 pb-12">
+      <div className="text-gray-400 text-xl leading-none md:ml-[24.5vw] pt-6 md:pt-32">
         Programming languages
       </div>
-      <div
-        ref={languagesListRef}
-        className="w-full flex justify-between md:justify-center items-start gap-6 md:gap-[6vw]"
-      >
-        {PROGRAMMING_LANGUAGES.map((language, idx) => (
-          <div key={idx} ref={(el) => (languagesRef.current[idx] = el)}>
-            <TechStackBox name={language.name} logo={language.logo} />
-          </div>
-        ))}
+      <div ref={languagesListRef} className="w-full overflow-hidden">
+        <div className="w-auto flex justify-start md:justify-center items-start gap-6 md:gap-20 overflow-x-auto overflow-y-hidden no-scrollbar py-12">
+          {PROGRAMMING_LANGUAGES.map((language, idx) => (
+            <div key={idx} ref={(el) => (languagesRef.current[idx] = el)}>
+              <TechStackBox name={language.name} logo={language.logo} />
+            </div>
+          ))}
+        </div>
       </div>
 
-      <div className="text-gray-400 text-lg md:text-[1vw] leading-none -ml-[0.05em] md:ml-[24.5vw] pt-32 pb-12">
+      <div className="text-gray-400 text-xl leading-none md:ml-[24.5vw] pt-6 md:pt-32">
         Tools
       </div>
-      <div
-        ref={toolsListRef}
-        className="w-full flex justify-between md:justify-center items-start gap-6 md:gap-[6vw]"
-      >
-        {TOOLS.map((tool, idx) => (
-          <div key={idx} ref={(el) => (toolsRef.current[idx] = el)}>
-            <TechStackBox name={tool.name} logo={tool.logo} />
-          </div>
-        ))}
+      <div ref={toolsListRef} className="w-full overflow-hidden">
+        <div className="w-auto flex justify-start md:justify-center items-start gap-6 md:gap-20 overflow-x-auto overflow-y-hidden no-scrollbar py-12">
+          {TOOLS.map((tool, idx) => (
+            <div key={idx} ref={(el) => (toolsRef.current[idx] = el)}>
+              <TechStackBox name={tool.name} logo={tool.logo} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

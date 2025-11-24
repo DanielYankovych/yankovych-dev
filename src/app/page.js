@@ -85,25 +85,25 @@ export default function Home() {
           setLoaderDone(true);
         }}
       />
-      <div className="w-full h-auto font-fixel-extra-bold uppercase">
-        <div ref={titleSectionRef} className="w-full h-dvh p-4 md:p-8">
+      <div className="w-full h-auto font-fixel-extra-bold uppercase overflow-x-hidden">
+        <div ref={titleSectionRef} className="w-full h-dvh p-3 md:p-8">
           <Title ref={titleRef} />
         </div>
 
         <div
           ref={techStackSectionRef}
-          className="p-4 md:px-8 md:pt-40 md:pb-32"
+          className="p-3 md:px-8 md:pt-40 md:pb-32"
         >
           <TechStack />
         </div>
 
-        <div ref={workWaySectionRef} className="p-4 md:p-8">
+        <div ref={workWaySectionRef} className="p-3 md:p-8">
           <WorkWay />
         </div>
 
         <div
           ref={contactSectionRef}
-          className="w-full h-dvh p-4 md:px-8 md:py-4"
+          className="w-full h-dvh p-3 md:px-8 md:py-4"
           id="get-in-touch"
         >
           <GetInTouch />

@@ -40,12 +40,15 @@ export const Title = forwardRef((props, ref) => {
             key={idx}
             ref={(el) => (titleRef.current[idx] = el)}
             className={classnames(
-              "leading-none text-nowrap",
-              idx === 0 && "text-red-500 text-3xl md:text-[6vw] -ml-[0.05em]",
-              idx === 1 && "text-white text-6xl md:text-[12vw] -ml-[0.06em]",
+              "leading-none",
+              idx === 0 &&
+                "text-red-500 text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl md:-ml-1",
+              idx === 1 &&
+                "text-white text-8xl md:text-9xl lg:text-[170px] 2xl:text-[200px] -ml-0.5 md:-ml-3 break-all",
               idx === 2 &&
-                "text-white md:ml-[22vw] text-5xl md:text-[12vw] ml-[0.01em] -mt-6",
-              idx === 3 && "md:ml-[24.5vw] text-red-500 text-3xl md:text-[6vw]",
+                "text-white text-8xl md:text-9xl lg:text-[170px] 2xl:text-[200px] md:-mt-4 xl:-mt-6 text-right md:-mr-3 break-all",
+              idx === 3 &&
+                "text-red-500 text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-right",
             )}
           >
             {title}
@@ -56,5 +59,3 @@ export const Title = forwardRef((props, ref) => {
     </div>
   );
 });
-
-Title.displayName = "Title";

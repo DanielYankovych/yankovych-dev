@@ -51,7 +51,7 @@ export const GetInTouch = () => {
       <FallingText
         text="Get in touch"
         highlightClass="highlighted"
-        trigger="hover"
+        trigger="scroll"
         backgroundColor="transparent"
         wireframes={false}
         gravity={0.3}

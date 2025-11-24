@@ -18,7 +18,7 @@ export const PageLoader = ({ onExpand }) => {
       tl.to(boxRef.current, {
         rotate: "+=45",
         duration: 0.6,
-        repeat: 5,
+        repeat: 3,
         repeatRefresh: true,
         ease: "power2.inOut",
       })
@@ -26,7 +26,7 @@ export const PageLoader = ({ onExpand }) => {
         .to(boxRef.current, {
           scale: 30,
           rotate: 0,
-          duration: 3,
+          duration: 2,
           ease: "power4.inOut",
           onComplete: () => {
             if (onExpand) onExpand();

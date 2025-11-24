@@ -1,5 +1,8 @@
 import {
   APOLLO_LOGO,
+  AWS_LOGO,
+  DND_LOGO,
+  GSAP_LOGO,
   JEST_LOGO,
   JS_LOGO,
   NEXT_LOGO,
@@ -68,6 +71,18 @@ export const TOOLS = [
   {
     name: "Jest",
     logo: JEST_LOGO,
+  },
+  {
+    name: "GSAP",
+    logo: GSAP_LOGO,
+  },
+  {
+    name: "AWS",
+    logo: AWS_LOGO,
+  },
+  {
+    name: "DnD kit",
+    logo: DND_LOGO,
   },
 ];
 
