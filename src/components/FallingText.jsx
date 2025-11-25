@@ -205,7 +205,7 @@ const FallingText = ({
     <div
       ref={containerRef}
       className={classnames(
-        "relative z-[1] w-full h-full text-center pt-8 text-red-500 text-8xl md:text-9xl lg:text-[170px] 2xl:text-[200px]",
+        "relative z-[1] size-full text-center pt-8 text-red-500 text-8xl md:text-9xl lg:text-[170px] 2xl:text-[200px]",
         effectStarted && "pointer-events-none",
       )}
       onClick={trigger === "click" ? handleTrigger : undefined}
