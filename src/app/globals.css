@@ -185,3 +185,29 @@ body {
     display: none;
   }
 }
+
+.holo-button::before {
+  content: "";
+  position: absolute;
+  top: -70%;
+  left: -120%;
+  width: 250%;
+  height: 250%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(183, 41, 41, .8) 50%,
+    transparent 100%
+  );
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
+  opacity: 0;
+}
+
+.holo-button:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(180%);
+}

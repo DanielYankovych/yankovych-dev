@@ -24,12 +24,13 @@ export const Button = ({ href, classNames, children }) => {
       href={href}
       onClick={handleClick}
       className={classnames(
-        "text-dark uppercase py-1.5 bg-light border-2 rounded-full text-lg md:text-xl font-fixel-medium text-center",
-        "hover:bg-red-500 hover:border-red-500 hover:!text-light transition-all ease-in-out duration-200",
+        "relative flex justify-center items-center text-center overflow-hidden outline-none",
+        "text-dark uppercase py-2 bg-light rounded-full text-lg md:text-xl font-fixel-medium",
+        "hover:scale-105 hover:shadow-[0_0_20px_rgba(183,41,41,0.8)] transition-all ease-in-out duration-300 holo-button",
         classNames,
       )}
     >
-      {children}
+      <span>{children}</span>
     </a>
   );
 };

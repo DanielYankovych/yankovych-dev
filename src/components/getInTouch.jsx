@@ -29,7 +29,7 @@ export const GetInTouch = () => {
 
   return (
     <div ref={sectionRef} className="size-full relative">
-      <div className="absolute w-full bottom-1/3 left-0 flex justify-end items-center z-10">
+      <div className="absolute w-full bottom-1/3 left-0 flex justify-center md:justify-end items-center z-10">
         <div className="flex flex-col justify-center items-center gap-10">
           <Link
             href="/cv/frontend-cv.pdf"
