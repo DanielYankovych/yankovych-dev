@@ -92,7 +92,7 @@ export default function Home() {
 
         <div
           ref={techStackSectionRef}
-          className="p-3 md:px-8 md:pt-40 md:pb-32"
+          className="p-3 md:px-8 md:pt-40 md:pb-16"
         >
           <TechStack />
         </div>

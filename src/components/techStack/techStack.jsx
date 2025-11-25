@@ -124,17 +124,6 @@ export const TechStack = () => {
           stagger: 3,
         },
       );
-
-      gsap.to(sectionRef.current, {
-        yPercent: -3,
-        ease: "none",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1.5,
-        },
-      });
     });
 
     return () => ctx.revert();
@@ -144,16 +133,19 @@ export const TechStack = () => {
     <div ref={sectionRef} className="w-full">
       <div
         ref={paragraphRef}
-        className="md:ml-[24.5vw] md:mr-[11vw] text-red-500 text-4xl md:text-5xl leading-tight"
+        className="w-full text-red-500 text-4xl md:text-5xl leading-tight"
       >
-        Every project has its own character, so I adapt my process to what it
-        needs — sometimes structured and straightforward, sometimes more
-        exploratory and creative.
+        Every project has its own character, <br />
+        so I adapt my process to what <br />
+        it needs — sometimes structured <br />
+        and straightforward, <br />
+        sometimes more exploratory <br />
+        and creative.
       </div>
 
       <div
         ref={techStackRef}
-        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl md:-ml-1 leading-none my-6 md:my-32 text-center"
+        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl md:-ml-1 leading-none my-6 md:my-16 text-center"
       >
         My tech stack
       </div>
@@ -178,7 +170,7 @@ export const TechStack = () => {
         </div>
       </div>
 
-      <div className="flex justify-start items-center text-xl font-fixel-medium">
+      <div className="flex justify-start items-center text-xl font-fixel-medium pt-16">
         <div className="text-gray-500 border-2 border-gray-500 px-6 py-1 rounded-full">
           Programming languages
         </div>
@@ -193,7 +185,7 @@ export const TechStack = () => {
         </div>
       </div>
 
-      <div className="flex justify-start items-center text-xl font-fixel-medium">
+      <div className="flex justify-start items-center text-xl font-fixel-medium pt-16">
         <div className="text-gray-500 border-2 border-gray-500 px-6 py-1 rounded-full">
           Tools
         </div>

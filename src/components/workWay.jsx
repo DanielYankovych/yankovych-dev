@@ -71,7 +71,7 @@ export const WorkWay = () => {
 
       <div
         ref={wordsSectionRef}
-        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl leading-tight pt-6 md:pt-32 md:ml-[24.5vw]"
+        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl leading-tight pt-6 md:pt-16 md:ml-[24.5vw]"
       >
         {WORK_WAY.map((word, idx) => (
           <div
@@ -89,7 +89,7 @@ export const WorkWay = () => {
           <div className="text-dark text-4xl md:text-5xl mb-8">Check my</div>
           <Button
             href={GITHUB_LINK}
-            classNames="!text-light border-red-500 bg-red-500 !text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl px-10 leading-none !font-fixel-bold"
+            classNames="!text-light bg-red-500 !text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl px-10 !font-fixel-bold holo-button-red"
           >
             Github
           </Button>

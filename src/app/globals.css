@@ -186,7 +186,8 @@ body {
   }
 }
 
-.holo-button::before {
+.holo-button::before,
+.holo-button-red::before {
   content: "";
   position: absolute;
   top: -70%;
@@ -194,20 +195,48 @@ body {
   width: 250%;
   height: 250%;
   transform: translate(-50%, -50%) rotate(-45deg);
+  transition:
+    transform 1.5s ease,
+    opacity 1.5s ease;
+  opacity: 0;
+}
 
+.holo-button::before {
   background: linear-gradient(
     to bottom,
     transparent 0%,
     rgba(183, 41, 41, .8) 50%,
     transparent 100%
   );
-  transition:
-    transform 1s ease,
-    opacity 1s ease;
-  opacity: 0;
 }
 
-.holo-button:hover::before {
-  opacity: 1;
-  transform: rotate(-45deg) translateY(180%);
+.holo-button-red::before {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, .8) 50%,
+    transparent 100%
+  );
+}
+
+.holo-button:hover::before,
+.holo-button-red:hover::before {
+  animation: holoSweep 1.2s ease-out forwards;
+}
+
+@keyframes holoSweep {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(-45deg) translateY(0);
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-45deg) translateY(180%);
+  }
 }
