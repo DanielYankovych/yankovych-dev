@@ -45,32 +45,32 @@ export default function Home() {
         trigger: titleSectionRef.current,
         start: "top center",
         end: "bottom center",
-        onEnter: () => setBg("#000"),
-        onEnterBack: () => setBg("#000"),
+        onEnter: () => setBg("#131010"),
+        onEnterBack: () => setBg("#131010"),
       });
 
       ScrollTrigger.create({
         trigger: techStackSectionRef.current,
         start: "top center",
         end: "bottom center",
-        onEnter: () => setBg("#fff"),
-        onEnterBack: () => setBg("#fff"),
+        onEnter: () => setBg("#F3F3F3"),
+        onEnterBack: () => setBg("#F3F3F3"),
       });
 
       ScrollTrigger.create({
         trigger: workWaySectionRef.current,
         start: "top center",
         end: "bottom center",
-        onEnter: () => setBg("#fff"),
-        onEnterBack: () => setBg("#fff"),
+        onEnter: () => setBg("#F3F3F3"),
+        onEnterBack: () => setBg("#F3F3F3"),
       });
 
       ScrollTrigger.create({
         trigger: contactSectionRef.current,
         start: "top center",
         end: "bottom center",
-        onEnter: () => setBg("#000"),
-        onEnterBack: () => setBg("#000"),
+        onEnter: () => setBg("#131010"),
+        onEnterBack: () => setBg("#131010"),
       });
     });
 

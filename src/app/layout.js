@@ -7,6 +7,10 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const fixelMedium = localFont({
+  src: "./fonts/fixel/FixelDisplay-Medium.woff2",
+  variable: "--font-fixel-medium",
+});
 const fixelBold = localFont({
   src: "./fonts/fixel/FixelDisplay-Bold.woff2",
   variable: "--font-fixel-bold",
@@ -41,7 +45,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased ${fixelBold.variable} ${fixelExtraBold.variable}`}
+        className={`antialiased ${fixelMedium.variable} ${fixelBold.variable} ${fixelExtraBold.variable}`}
       >
         {children}
       </body>

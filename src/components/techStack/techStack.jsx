@@ -144,7 +144,7 @@ export const TechStack = () => {
     <div ref={sectionRef} className="w-full">
       <div
         ref={paragraphRef}
-        className="indent-10 md:indent-20 md:ml-[24.5vw] md:mr-[11vw] text-red-500 text-4xl md:text-[52px] leading-tight"
+        className="md:ml-[24.5vw] md:mr-[11vw] text-red-500 text-4xl md:text-5xl leading-tight"
       >
         Every project has its own character, so I adapt my process to what it
         needs — sometimes structured and straightforward, sometimes more
@@ -153,13 +153,15 @@ export const TechStack = () => {
 
       <div
         ref={techStackRef}
-        className="text-gray-500 text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl md:-ml-1 leading-none my-6 md:my-32"
+        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl md:-ml-1 leading-none my-6 md:my-32 text-center"
       >
         My tech stack
       </div>
 
-      <div className="text-gray-400 text-xl leading-none md:ml-[24.5vw]">
-        Frameworks
+      <div className="flex justify-start items-center text-xl font-fixel-medium">
+        <div className="text-gray-500 border-2 border-gray-500 px-6 py-1 rounded-full">
+          Frameworks
+        </div>
       </div>
 
       <div ref={frameworksListRef} className="w-full overflow-hidden">
@@ -176,8 +178,10 @@ export const TechStack = () => {
         </div>
       </div>
 
-      <div className="text-gray-400 text-xl leading-none md:ml-[24.5vw] pt-6 md:pt-32">
-        Programming languages
+      <div className="flex justify-start items-center text-xl font-fixel-medium">
+        <div className="text-gray-500 border-2 border-gray-500 px-6 py-1 rounded-full">
+          Programming languages
+        </div>
       </div>
       <div ref={languagesListRef} className="w-full overflow-hidden">
         <div className="w-auto flex justify-start md:justify-center items-start gap-6 md:gap-20 overflow-x-auto overflow-y-hidden no-scrollbar py-12">
@@ -189,8 +193,10 @@ export const TechStack = () => {
         </div>
       </div>
 
-      <div className="text-gray-400 text-xl leading-none md:ml-[24.5vw] pt-6 md:pt-32">
-        Tools
+      <div className="flex justify-start items-center text-xl font-fixel-medium">
+        <div className="text-gray-500 border-2 border-gray-500 px-6 py-1 rounded-full">
+          Tools
+        </div>
       </div>
       <div ref={toolsListRef} className="w-full overflow-hidden">
         <div className="w-auto flex justify-start md:justify-center items-start gap-6 md:gap-20 overflow-x-auto overflow-y-hidden no-scrollbar py-12">

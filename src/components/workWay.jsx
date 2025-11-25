@@ -63,7 +63,7 @@ export const WorkWay = () => {
     <div ref={sectionRef} className="w-full">
       <div
         ref={textRef}
-        className="indent-10 md:indent-20 md:mr-[11vw] text-black text-4xl md:text-[52px] leading-tight"
+        className="text-center text-dark text-4xl md:text-5xl leading-tight"
       >
         What stays consistent <br />
         is the way I work:
@@ -71,7 +71,7 @@ export const WorkWay = () => {
 
       <div
         ref={wordsSectionRef}
-        className="text-black text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl leading-tight pt-6 md:pt-32 md:ml-[24.5vw]"
+        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl leading-tight pt-6 md:pt-32 md:ml-[24.5vw]"
       >
         {WORK_WAY.map((word, idx) => (
           <div
@@ -84,14 +84,12 @@ export const WorkWay = () => {
         ))}
       </div>
 
-      <div className="w-full pt-12 md:pt-32 pb-12 flex justify-end items-center">
+      <div className="w-full pt-12 md:pt-32 pb-12 flex justify-start items-center">
         <div>
-          <div className="text-red-500 text-4xl md:text-[52px] mb-4">
-            Check my
-          </div>
+          <div className="text-dark text-4xl md:text-5xl mb-8">Check my</div>
           <Button
             href={GITHUB_LINK}
-            classNames="!text-gray-500 border-gray-500 !text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl px-10 leading-none"
+            classNames="!text-light border-red-500 bg-red-500 !text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl px-10 leading-none !font-fixel-bold"
           >
             Github
           </Button>

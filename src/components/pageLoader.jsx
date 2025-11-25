@@ -34,7 +34,7 @@ export const PageLoader = ({ onExpand }) => {
         })
 
         .to("body", {
-          backgroundColor: "#000",
+          backgroundColor: "#131010",
           duration: 0,
           ease: "none",
         })
@@ -57,7 +57,7 @@ export const PageLoader = ({ onExpand }) => {
       ref={loaderRef}
       className="loader fixed inset-0 flex items-center justify-center bg-transparent z-50"
     >
-      <div ref={boxRef} className="loader-box w-20 h-20 bg-black"></div>
+      <div ref={boxRef} className="loader-box w-20 h-20 bg-[#131010]"></div>
     </div>
   );
 };

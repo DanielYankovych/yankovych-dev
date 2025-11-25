@@ -30,7 +30,7 @@ export const Title = forwardRef((props, ref) => {
       className="size-full flex flex-col justify-between opacity-0"
     >
       <div className="w-full flex justify-end items-center h-10">
-        <Button href="#get-in-touch" classNames="max-w-40 w-full">
+        <Button href="#get-in-touch" classNames="max-w-44 w-full">
           Get in touch
         </Button>
       </div>
@@ -44,9 +44,9 @@ export const Title = forwardRef((props, ref) => {
               idx === 0 &&
                 "text-red-500 text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl md:-ml-1",
               idx === 1 &&
-                "text-white text-8xl md:text-9xl lg:text-[170px] 2xl:text-[200px] -ml-0.5 md:-ml-3 break-all",
+                "text-light text-8xl md:text-9xl lg:text-[170px] 2xl:text-[200px] -ml-0.5 md:-ml-3 break-all",
               idx === 2 &&
-                "text-white text-8xl md:text-9xl lg:text-[170px] 2xl:text-[200px] md:-mt-4 xl:-mt-6 text-right md:-mr-3 break-all",
+                "text-light text-8xl md:text-9xl lg:text-[170px] 2xl:text-[200px] md:-mt-4 xl:-mt-6 text-right md:-mr-3 break-all",
               idx === 3 &&
                 "text-red-500 text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-right",
             )}

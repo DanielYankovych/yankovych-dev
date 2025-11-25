@@ -34,7 +34,7 @@ export const GetInTouch = () => {
           <Link
             href="/cv/frontend-cv.pdf"
             download="Frontend Developer Daniel Yankovych CV - CA.pdf"
-            className="text-white font-fixel-bold text-lg md:text-xl underline underline-offset-8 hover:text-red-500 transition-all ease-in-out duration-200"
+            className="text-white font-fixel-medium text-lg md:text-xl underline underline-offset-8 hover:text-red-500 transition-all ease-in-out duration-200"
           >
             Download my CV
           </Link>
