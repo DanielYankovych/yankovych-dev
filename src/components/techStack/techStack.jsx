@@ -3,8 +3,9 @@
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { FRAMEWORKS, PROGRAMMING_LANGUAGES, TOOLS } from "@/data";
+import { PROGRAMMING_LANGUAGES, TOOLS } from "@/data";
 import { TechStackBox } from "@/components/techStack/techStackBox";
+import { TechStackSwiper } from "@/components/techStack/techStackSwiper";
 
 export const TechStack = () => {
   const sectionRef = useRef(null);
@@ -156,17 +157,18 @@ export const TechStack = () => {
       </div>
 
       <div ref={frameworksListRef} className="w-full overflow-hidden">
-        <div className="w-auto flex justify-start md:justify-center items-start gap-6 md:gap-20 overflow-x-auto no-scrollbar py-8 md:py-12">
-          {FRAMEWORKS.map((framework, idx) => (
-            <div key={idx} ref={(el) => (frameworksRef.current[idx] = el)}>
-              <TechStackBox
-                name={framework.name}
-                logo={framework.logo}
-                classNames={idx === 2 && "!p-3"}
-              />
-            </div>
-          ))}
-        </div>
+        {/*<div className="w-auto flex justify-start md:justify-center items-start gap-6 md:gap-20 overflow-x-auto no-scrollbar py-8 md:py-12">*/}
+        {/*  {FRAMEWORKS.map((framework, idx) => (*/}
+        {/*    <div key={idx} ref={(el) => (frameworksRef.current[idx] = el)}>*/}
+        {/*      <TechStackBox*/}
+        {/*        name={framework.name}*/}
+        {/*        logo={framework.logo}*/}
+        {/*        classNames={idx === 2 && "!p-3"}*/}
+        {/*      />*/}
+        {/*    </div>*/}
+        {/*  ))}*/}
+        {/*</div>*/}
+        <TechStackSwiper ref={frameworksRef} />
       </div>
 
       <div className="flex justify-start items-center text-lg md:text-xl font-fixel-medium pt-8 md:pt-16">

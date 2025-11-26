@@ -38,6 +38,18 @@ export const FRAMEWORKS = [
     name: "TailwindCSS",
     logo: TAILWIND_LOGO,
   },
+  {
+    name: "React",
+    logo: REACT_LOGO,
+  },
+  {
+    name: "Next.js",
+    logo: NEXT_LOGO,
+  },
+  {
+    name: "TailwindCSS",
+    logo: TAILWIND_LOGO,
+  },
 ];
 
 export const PROGRAMMING_LANGUAGES = [
