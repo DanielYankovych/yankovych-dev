@@ -57,20 +57,8 @@ export const PROGRAMMING_LANGUAGES = [
 
 export const TOOLS = [
   {
-    name: "Apollo",
-    logo: APOLLO_LOGO,
-  },
-  {
-    name: "OpenAI",
-    logo: OPEANAI_LOGO,
-  },
-  {
     name: "Redux",
     logo: REDUX_LOGO,
-  },
-  {
-    name: "Jest",
-    logo: JEST_LOGO,
   },
   {
     name: "GSAP",
@@ -81,15 +69,37 @@ export const TOOLS = [
     logo: AWS_LOGO,
   },
   {
+    name: "Apollo",
+    logo: APOLLO_LOGO,
+  },
+  {
     name: "DnD kit",
     logo: DND_LOGO,
+  },
+  {
+    name: "OpenAI",
+    logo: OPEANAI_LOGO,
+  },
+  {
+    name: "Jest",
+    logo: JEST_LOGO,
   },
 ];
 
 export const WORK_WAY = [
-  "Thoughtful",
-  "decisions,",
-  "clean execution,",
-  "attention",
-  "to the details.",
+  // "Thoughtful",
+  // "decisions,",
+  // "clean execution,",
+  // "attention",
+  // "to the details.",
+  "Precise",
+  "Strategic",
+  "Robust",
+  "Intuitive",
+  "Scalable",
+  "Insightful",
+  "Reliable",
+  "Consistent",
+  "Adaptable",
+  "Elegant",
 ];

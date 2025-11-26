@@ -38,22 +38,22 @@ export const WorkWay = () => {
         },
       });
 
-      gsap.fromTo(
-        wordsRef.current,
-        { x: (i) => (i % 2 === 0 ? 150 : -150) },
-        {
-          x: 0,
-          ease: "none",
-          duration: 3,
-          stagger: 1,
+      const words = gsap.utils.toArray(wordsRef.current);
+
+      gsap
+        .timeline({
           scrollTrigger: {
             trigger: wordsSectionRef.current,
-            start: "top center",
-            end: "bottom center",
-            scrub: 2,
+            start: "top 95%",
+            end: "bottom 90%",
+            scrub: 1,
           },
-        },
-      );
+        })
+        .fromTo(
+          words,
+          { x: (i) => gsap.utils.wrap([150, -150])(i) },
+          { x: 0, ease: "none", stagger: 0.2 }, // NO duration here
+        );
     });
 
     return () => ctx.revert();
@@ -71,20 +71,20 @@ export const WorkWay = () => {
 
       <div
         ref={wordsSectionRef}
-        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl leading-tight pt-6 md:pt-16 md:ml-[24.5vw]"
+        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl leading-tight pt-6 md:pt-16 text-center"
       >
         {WORK_WAY.map((word, idx) => (
           <div
             key={idx}
             ref={(el) => (wordsRef.current[idx] = el)}
-            className="transition-all ease-in-out duration-200 hover:text-red-500"
+            className="transition-colors ease-in-out duration-200 hover:text-red-500"
           >
             {word}
           </div>
         ))}
       </div>
 
-      <div className="w-full pt-12 md:pt-32 pb-12 flex justify-start items-center">
+      <div className="w-full pt-12 md:pt-32 pb-12 flex justify-end items-center">
         <div>
           <div className="text-dark text-4xl md:text-5xl mb-8">Check my</div>
           <Button

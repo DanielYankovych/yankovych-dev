@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { Button } from "@/components/button";
 import { EMAIL_LINK, LINKEDIN_LINK } from "@/data";
 import Link from "next/link";
-import FallingText from "@/components/FallingText";
+import FallingText from "@/components/fallingText";
 
 export const GetInTouch = () => {
   const sectionRef = useRef(null);
