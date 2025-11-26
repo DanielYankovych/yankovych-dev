@@ -133,9 +133,9 @@ export const TechStack = () => {
     <div ref={sectionRef} className="w-full">
       <div
         ref={paragraphRef}
-        className="w-3/4 text-red-500 text-4xl md:text-5xl leading-tight"
+        className="w-full md:w-3/4 text-red-500 text-4xl md:text-5xl leading-tight"
       >
-        <div className="w-full pr-3">
+        <div className="w-full pr-0 md:pr-3">
           Every project has its own character, so I adapt my process to what it
           needs — sometimes structured and straightforward, sometimes more
           exploratory and creative.
@@ -144,7 +144,7 @@ export const TechStack = () => {
 
       <div
         ref={techStackRef}
-        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl md:-ml-1 leading-none py-6 md:py-16 text-center"
+        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl md:-ml-1 leading-none pb-16 md:py-16 text-center"
       >
         My tech stack
       </div>

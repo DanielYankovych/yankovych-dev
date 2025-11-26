@@ -90,10 +90,7 @@ export default function Home() {
           <Title ref={titleRef} />
         </div>
 
-        <div
-          ref={techStackSectionRef}
-          className="p-3 md:px-8 md:pt-40 md:pb-28"
-        >
+        <div ref={techStackSectionRef} className="px-3 md:px-8 md:pt-40 pb-28">
           <TechStack />
         </div>
 
