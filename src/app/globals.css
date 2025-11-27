@@ -240,3 +240,7 @@ body {
     transform: rotate(-45deg) translateY(180%);
   }
 }
+
+.swiper-wrapper {
+    height: auto !important;
+}

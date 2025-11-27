@@ -76,54 +76,69 @@ export const TechStack = () => {
 
       gsap.fromTo(
         frameworksRef.current,
-        { y: 120 },
+        { y: 100 },
         {
           y: 0,
-          ease: "power1.inOut",
+          ease: "none",
           scrollTrigger: {
             trigger: frameworksListRef.current,
-            start: "top bottom",
-            end: "bottom bottom",
-            scrub: 3,
+            start: "top 90%",
+            end: "bottom 80%",
+            scrub: 1.5,
           },
-          duration: 6,
-          stagger: 3,
+          duration: 5,
+          stagger: 2,
         },
       );
 
       gsap.fromTo(
         languagesRef.current,
-        { y: 120 },
+        { y: 100 },
         {
           y: 0,
-          ease: "power1.inOut",
+          ease: "none",
           scrollTrigger: {
             trigger: languagesListRef.current,
-            start: "top bottom",
-            end: "bottom bottom",
-            scrub: 4,
+            start: "top 90%",
+            end: "bottom 80%",
+            scrub: 1.5,
           },
-          duration: 6,
-          stagger: 3,
+          duration: 5,
+          stagger: 2,
         },
       );
 
       gsap.fromTo(
         toolsRef.current,
-        { y: 120 },
+        { y: 100 },
         {
           y: 0,
-          ease: "power1.inOut",
+          ease: "none",
           scrollTrigger: {
             trigger: toolsListRef.current,
-            start: "top bottom",
-            end: "bottom bottom",
-            scrub: 5,
+            start: "top 90%",
+            end: "bottom 80%",
+            scrub: 1.5,
           },
-          duration: 6,
-          stagger: 3,
+          duration: 5,
+          stagger: 2,
         },
       );
+
+      const mm = gsap.matchMedia();
+
+      mm.add("(min-width: 768px)", () => {
+        gsap.to(toolsRef.current, {
+          xPercent: -50,
+          ease: "none",
+          scrollTrigger: {
+            trigger: toolsListRef.current,
+            start: "top center",
+            end: "bottom center",
+            scrub: 0.5,
+          },
+        });
+      });
     });
 
     return () => ctx.revert();
@@ -144,7 +159,7 @@ export const TechStack = () => {
 
       <div
         ref={techStackRef}
-        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl md:-ml-1 leading-none pb-16 pt-0 md:py-16 text-center"
+        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl md:-ml-1 leading-none py-12 md:pt-28 text-center"
       >
         My tech stack
       </div>
@@ -157,32 +172,32 @@ export const TechStack = () => {
 
       <div
         ref={frameworksListRef}
-        className="w-full overflow-hidden py-8 md:py-12"
+        className="w-full overflow-hidden pt-10 md:pt-12"
       >
         <TechStackSwiper data={FRAMEWORKS} ref={frameworksRef} />
       </div>
 
-      <div className="flex justify-start items-center text-lg md:text-xl font-fixel-medium pt-8 md:pt-16">
+      <div className="flex justify-start items-center text-lg md:text-xl font-fixel-medium pt-4 md:pt-8">
         <div className="text-gray-500 border-2 border-gray-500 px-6 py-1 rounded-full">
           Programming languages
         </div>
       </div>
       <div
         ref={languagesListRef}
-        className="w-full overflow-hidden py-8 md:py-12"
+        className="w-full overflow-hidden pt-10 md:pt-12"
       >
         <TechStackSwiper data={PROGRAMMING_LANGUAGES} ref={languagesRef} />
       </div>
 
-      <div className="flex justify-start items-center text-lg md:text-xl font-fixel-medium pt-8 md:pt-16">
+      <div className="flex justify-start items-center text-lg md:text-xl font-fixel-medium pt-4 md:pt-8">
         <div className="text-gray-500 border-2 border-gray-500 px-6 py-1 rounded-full">
           Tools
         </div>
       </div>
-      <div ref={toolsListRef} className="w-full overflow-hidden py-8 md:py-12">
+      <div ref={toolsListRef} className="w-full overflow-hidden pt-10 md:pt-12">
         <TechStackSwiper
           data={TOOLS}
-          slidesPerViewDesktop={7}
+          slidesPerView={7}
           initialSlide={3}
           autoplay
           ref={toolsRef}

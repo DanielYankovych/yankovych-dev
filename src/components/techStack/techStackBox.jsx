@@ -29,7 +29,7 @@ export const TechStackBox = ({ name, logo, classNames }) => {
   return (
     <div
       className={classnames(
-        "relative w-36 md:w-40 aspect-square bg-dark flex justify-center items-center p-5",
+        "relative w-40 aspect-square bg-dark flex justify-center items-center p-5",
         classNames,
       )}
       onMouseEnter={() => handleMouseEnter(name)}
