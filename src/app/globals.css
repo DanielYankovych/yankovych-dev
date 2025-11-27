@@ -240,8 +240,3 @@ body {
     transform: rotate(-45deg) translateY(180%);
   }
 }
-
-.swiper-slide-prev .tech-box,
-.swiper-slide-next .tech-box {
-  filter: blur(1px);
-}
