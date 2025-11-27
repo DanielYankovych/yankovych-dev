@@ -27,12 +27,24 @@ export const TITLE = [
 
 export const FRAMEWORKS = [
   {
+    name: "Next.js",
+    logo: NEXT_LOGO,
+  },
+  {
     name: "React",
     logo: REACT_LOGO,
   },
   {
+    name: "TailwindCSS",
+    logo: TAILWIND_LOGO,
+  },
+  {
     name: "Next.js",
     logo: NEXT_LOGO,
+  },
+  {
+    name: "React",
+    logo: REACT_LOGO,
   },
   {
     name: "TailwindCSS",
@@ -53,9 +65,49 @@ export const PROGRAMMING_LANGUAGES = [
     name: "Node.js",
     logo: NODE_LOGO,
   },
+  {
+    name: "JavaScript",
+    logo: JS_LOGO,
+  },
+  {
+    name: "TypeScript",
+    logo: TS_LOGO,
+  },
+  {
+    name: "Node.js",
+    logo: NODE_LOGO,
+  },
 ];
 
 export const TOOLS = [
+  {
+    name: "Redux",
+    logo: REDUX_LOGO,
+  },
+  {
+    name: "GSAP",
+    logo: GSAP_LOGO,
+  },
+  {
+    name: "AWS",
+    logo: AWS_LOGO,
+  },
+  {
+    name: "Apollo",
+    logo: APOLLO_LOGO,
+  },
+  {
+    name: "DnD kit",
+    logo: DND_LOGO,
+  },
+  {
+    name: "OpenAI",
+    logo: OPEANAI_LOGO,
+  },
+  {
+    name: "Jest",
+    logo: JEST_LOGO,
+  },
   {
     name: "Redux",
     logo: REDUX_LOGO,

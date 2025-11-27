@@ -15,7 +15,7 @@ export const WorkWay = () => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         textRef.current,
-        { y: 60 },
+        { y: 50 },
         {
           y: 0,
           duration: 2,
@@ -28,7 +28,7 @@ export const WorkWay = () => {
       );
 
       gsap.to(textRef.current, {
-        yPercent: -60,
+        yPercent: -50,
         ease: "none",
         scrollTrigger: {
           trigger: textRef.current,
@@ -70,7 +70,7 @@ export const WorkWay = () => {
 
       <div
         ref={wordsSectionRef}
-        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl leading-tight pt-8 md:pt-16 text-center"
+        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl leading-tight pt-16 text-center"
       >
         {WORK_WAY.map((word, idx) => (
           <div

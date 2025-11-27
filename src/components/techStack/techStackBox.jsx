@@ -29,7 +29,7 @@ export const TechStackBox = ({ name, logo, classNames }) => {
   return (
     <div
       className={classnames(
-        "relative w-28 md:w-36 aspect-square bg-dark flex justify-center items-center p-5",
+        "relative w-36 md:w-40 aspect-square bg-dark flex justify-center items-center p-5",
         classNames,
       )}
       onMouseEnter={() => handleMouseEnter(name)}
@@ -40,12 +40,13 @@ export const TechStackBox = ({ name, logo, classNames }) => {
         src={logo}
         width={110}
         height={110}
-        alt={name}
+        draggable={false}
         className="w-full h-auto"
+        alt={name}
       />
       {isHovered && tooltipText === name && (
         <div
-          className="absolute bg-white/50 backdrop-blur-xs text-dark px-4 py-1 rounded-full z-50"
+          className="absolute bg-white/70 backdrop-blur-xs text-dark text-sm px-4 py-1 rounded-full z-[999]"
           style={{
             top: mousePosition.y + 10,
             left: mousePosition.x + 10,
