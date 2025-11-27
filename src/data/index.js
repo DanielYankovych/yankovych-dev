@@ -27,24 +27,24 @@ export const TITLE = [
 
 export const FRAMEWORKS = [
   {
-    name: "Next.js",
-    logo: NEXT_LOGO,
-  },
-  {
     name: "React",
     logo: REACT_LOGO,
+  },
+  {
+    name: "Next.js",
+    logo: NEXT_LOGO,
   },
   {
     name: "TailwindCSS",
     logo: TAILWIND_LOGO,
   },
   {
-    name: "Next.js",
-    logo: NEXT_LOGO,
-  },
-  {
     name: "React",
     logo: REACT_LOGO,
+  },
+  {
+    name: "Next.js",
+    logo: NEXT_LOGO,
   },
   {
     name: "TailwindCSS",
