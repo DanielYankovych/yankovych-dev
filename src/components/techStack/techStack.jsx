@@ -125,15 +125,19 @@ export const TechStack = () => {
         },
       );
 
-      gsap.to(toolsRef.current, {
-        xPercent: -50,
-        ease: "none",
-        scrollTrigger: {
-          trigger: toolsListRef.current,
-          start: "top center",
-          end: "bottom center",
-          scrub: 0.5,
-        },
+      const mm = gsap.matchMedia();
+
+      mm.add("(min-width: 768px)", () => {
+        gsap.to(toolsRef.current, {
+          xPercent: -50,
+          ease: "none",
+          scrollTrigger: {
+            trigger: toolsListRef.current,
+            start: "top center",
+            end: "bottom center",
+            scrub: 0.5,
+          },
+        });
       });
     });
 
