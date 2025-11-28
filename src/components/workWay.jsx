@@ -3,7 +3,7 @@
 import React, { useLayoutEffect, useRef } from "react";
 import { GITHUB_LINK, WORK_WAY } from "@/data";
 import gsap from "gsap";
-import { Button } from "@/components/button";
+import { Button } from "@/components/main/button";
 
 export const WorkWay = () => {
   const sectionRef = useRef(null);

@@ -46,7 +46,7 @@ export const TechStackBox = ({ name, logo, classNames }) => {
       />
       {isHovered && tooltipText === name && (
         <div
-          className="absolute bg-white/70 backdrop-blur-xs text-dark text-sm px-4 py-1 rounded-full z-[999]"
+          className="absolute bg-white/70 backdrop-blur-xs text-dark text-sm px-4 py-1 rounded-full text-nowrap z-[999]"
           style={{
             top: mousePosition.y + 10,
             left: mousePosition.x + 10,
