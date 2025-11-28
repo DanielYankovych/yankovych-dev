@@ -2,7 +2,7 @@
 
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
-import { Button } from "@/components/button";
+import { Button } from "@/components/main/button";
 import { EMAIL_LINK, LINKEDIN_LINK } from "@/data";
 import Link from "next/link";
 import FallingText from "@/components/fallingText";

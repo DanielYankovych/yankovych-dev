@@ -4,7 +4,7 @@ import React, { forwardRef, useImperativeHandle, useRef } from "react";
 import gsap from "gsap";
 import { TITLE } from "@/data";
 import classnames from "classnames";
-import { Button } from "@/components/button";
+import { Button } from "@/components/main/button";
 
 export const Title = forwardRef((props, ref) => {
   const containerRef = useRef();
