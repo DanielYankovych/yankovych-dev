@@ -18,3 +18,5 @@ export const GSAP_LOGO = require("@/assets/tools-logo/gsap-logo.svg").default
   .src;
 export const AWS_LOGO = require("@/assets/tools-logo/aws-logo.svg").default.src;
 export const DND_LOGO = require("@/assets/tools-logo/dnd-logo.svg").default.src;
+export const THREE_LOGO = require("@/assets/tools-logo/three-logo.svg").default
+  .src;

@@ -11,6 +11,7 @@ import {
   REACT_LOGO,
   REDUX_LOGO,
   TAILWIND_LOGO,
+  THREE_LOGO,
   TS_LOGO,
 } from "@/assets";
 
@@ -61,12 +62,16 @@ export const TOOLS = [
     logo: REDUX_LOGO,
   },
   {
+    name: "AWS",
+    logo: AWS_LOGO,
+  },
+  {
     name: "GSAP",
     logo: GSAP_LOGO,
   },
   {
-    name: "AWS",
-    logo: AWS_LOGO,
+    name: "Three.js",
+    logo: THREE_LOGO,
   },
   {
     name: "Apollo",
