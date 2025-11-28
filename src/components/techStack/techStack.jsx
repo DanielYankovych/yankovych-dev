@@ -124,21 +124,6 @@ export const TechStack = () => {
           stagger: 2,
         },
       );
-
-      const mm = gsap.matchMedia();
-
-      mm.add("(min-width: 768px)", () => {
-        gsap.to(toolsRef.current, {
-          xPercent: -50,
-          ease: "none",
-          scrollTrigger: {
-            trigger: toolsListRef.current,
-            start: "top center",
-            end: "bottom center",
-            scrub: 0.5,
-          },
-        });
-      });
     });
 
     return () => ctx.revert();
@@ -197,10 +182,8 @@ export const TechStack = () => {
       <div ref={toolsListRef} className="w-full overflow-hidden pt-10 md:pt-12">
         <TechStackSwiper
           data={TOOLS}
-          slidesPerView={7}
-          initialSlide={3}
-          autoplay
           ref={toolsRef}
+          classNames="!justify-start"
         />
       </div>
     </div>

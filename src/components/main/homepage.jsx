@@ -112,7 +112,7 @@ export const Homepage = () => {
           setLoaderDone(true);
         }}
       />
-      <div className="w-full h-auto font-fixel-extra-bold uppercase overflow-x-hidden">
+      <div className="w-full h-auto font-fixel-extra-bold uppercase overflow-x-hidden z-1 relative">
         <div ref={titleSectionRef} className="w-full h-dvh p-3 md:p-8">
           <Title ref={titleRef} />
         </div>
