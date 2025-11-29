@@ -19,12 +19,7 @@ export const GITHUB_LINK = "https://github.com/DanielYankovych";
 export const LINKEDIN_LINK = "https://www.linkedin.com/in/daniel-yankovych/";
 export const EMAIL_LINK = "mailto:me@yankovych.dev";
 
-export const TITLE = [
-  "Hello I'm",
-  "Daniyel",
-  "Yankovych",
-  "Frontend Developer",
-];
+export const TITLE = ["Hello I'm", "Daniel", "Yankovych", "Frontend Developer"];
 
 export const FRAMEWORKS = [
   {
