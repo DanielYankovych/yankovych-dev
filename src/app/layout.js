@@ -21,22 +21,38 @@ const fixelExtraBold = localFont({
 });
 
 export const metadata = {
-  title: "Daniyel Yankovych | Senior Frontend Developer",
+  metadataBase: new URL("https://yankovych.dev"),
+  title: "Daniel Yankovych | Senior Frontend Developer",
   description:
-    "Senior Front-End Developer specializing in React, Next.js, JavaScript/TypeScript, and high-performance user interfaces. Building modern, scalable products with clean architecture and a strong UI/UX focus.",
+    "Senior Frontend Developer specializing in React, Next.js, JavaScript/TypeScript, and scalable UI/UX architecture. Based in Vancouver.",
+  keywords: [
+    "Daniel Yankovych",
+    "Daniyel Yankovych",
+    "Yankovych Dev",
+    "Frontend Developer Vancouver",
+    "React Developer",
+    "Next.js Engineer",
+  ],
+  alternates: {
+    canonical: "https://yankovych.dev",
+  },
   openGraph: {
-    title: "Daniyel Yankovych | Senior Front-End Developer",
+    title: "Daniel Yankovych | Senior Frontend Developer",
     description:
-      "Senior Front-End Developer specializing in React, Next.js, JavaScript/TypeScript, and high-performance user interfaces. Building modern, scalable products with clean architecture and a strong UI/UX focus.",
+      "Senior Frontend Developer specializing in React, Next.js, JavaScript/TypeScript, and scalable UI/UX architecture. Based in Vancouver.",
     type: "profile",
     url: "https://yankovych.dev",
     images: ["/og-logo.png"],
+    profile: {
+      firstName: "Daniel",
+      lastName: "Yankovych",
+    },
   },
   twitter: {
     card: "summary_large_image",
-    title: "Daniyel Yankovych | Senior Front-End Developer",
+    title: "Daniel Yankovych | Senior Frontend Developer",
     description:
-      "Senior Front-End Developer specializing in React, Next.js, JavaScript/TypeScript, and high-performance user interfaces. Building modern, scalable products with clean architecture and a strong UI/UX focus.",
+      "Senior Frontend Developer specializing in React, Next.js, JavaScript/TypeScript, and scalable UI/UX architecture. Based in Vancouver.",
     images: ["/og-logo.png"],
   },
 };
@@ -47,6 +63,30 @@ export default function RootLayout({ children }) {
       <body
         className={`antialiased ${fixelMedium.variable} ${fixelBold.variable} ${fixelExtraBold.variable}`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Daniel Yankovych",
+              alternateName: ["Daniyel Yankovych"],
+              url: "https://yankovych.dev",
+              jobTitle: "Senior Frontend Developer",
+              image: "https://yankovych.dev/og-logo.png",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Vancouver",
+                addressRegion: "BC",
+                addressCountry: "Canada",
+              },
+              sameAs: [
+                "https://www.linkedin.com/in/daniel-yankovych/",
+                "https://github.com/DanielYankovych",
+              ],
+            }),
+          }}
+        />
         {children}
       </body>
     </html>

@@ -241,6 +241,7 @@ body {
   }
 }
 
-.swiper-wrapper {
-    height: auto !important;
+.hidden {
+    position: absolute;
+    left: -9999px;
 }
