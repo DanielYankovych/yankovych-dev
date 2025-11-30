@@ -90,7 +90,7 @@ export const WorkWay = () => {
           </div>
           <Button
             href={GITHUB_LINK}
-            classNames="!text-light bg-red-500 !text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl px-10 !font-fixel-bold holo-button-red"
+            classNames="!text-light bg-red-500 !text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl px-10 !font-fixel-bold"
           >
             Github
           </Button>

@@ -133,12 +133,13 @@ export const TechStack = () => {
     <div ref={sectionRef} className="w-full">
       <div
         ref={paragraphRef}
-        className="w-full md:w-3/4 text-red-500 text-4xl md:text-5xl leading-tight"
+        className="w-full md:w-2/3 text-red-500 text-4xl md:text-5xl leading-tight"
       >
-        <div className="w-full pr-0 md:pr-3">
-          Every project has its own character, so I adapt my process to what it
-          needs — sometimes structured and straightforward, sometimes more
-          exploratory and creative.
+        <div className="w-full">
+          Every project is unique. <br />
+          So I adapt my frontend process accordingly- whether it needs
+          predictable, efficient engineering, or rapid iteration,
+          experimentation, and creative technical solution.
         </div>
       </div>
 
