@@ -26,7 +26,7 @@ export const Button = ({ href, classNames, children }) => {
       className={classnames(
         "relative flex justify-center items-center text-center overflow-hidden outline-none",
         "text-dark uppercase py-2.5 bg-light rounded-full text-lg md:text-xl font-fixel-medium",
-        "hover:bg-red-500 hover:text-light hover:scale-105",
+        "hover:bg-red-500 hover:text-light hover:scale-x-105",
         "transition-all ease-in-out duration-300",
         classNames,
       )}

@@ -5,8 +5,6 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { FRAMEWORKS, PROGRAMMING_LANGUAGES, TOOLS } from "@/data";
 import { TechStackSwiper } from "@/components/techStack/techStackSwiper";
-import { TechStackBoxNew } from "@/components/techStack/techStackBoxNew";
-import classnames from "classnames";
 
 export const TechStack = () => {
   const sectionRef = useRef(null);
@@ -76,22 +74,22 @@ export const TechStack = () => {
         },
       });
 
-      // gsap.fromTo(
-      //   frameworksRef.current,
-      //   { y: 100 },
-      //   {
-      //     y: 0,
-      //     ease: "none",
-      //     scrollTrigger: {
-      //       trigger: frameworksListRef.current,
-      //       start: "top 90%",
-      //       end: "bottom 80%",
-      //       scrub: 1.5,
-      //     },
-      //     duration: 5,
-      //     stagger: 2,
-      //   },
-      // );
+      gsap.fromTo(
+        frameworksRef.current,
+        { y: 100 },
+        {
+          y: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: frameworksListRef.current,
+            start: "top 90%",
+            end: "bottom 90%",
+            scrub: 1.5,
+          },
+          duration: 5,
+          stagger: 2,
+        },
+      );
 
       gsap.fromTo(
         languagesRef.current,
@@ -102,7 +100,7 @@ export const TechStack = () => {
           scrollTrigger: {
             trigger: languagesListRef.current,
             start: "top 90%",
-            end: "bottom 80%",
+            end: "bottom 90%",
             scrub: 1.5,
           },
           duration: 5,
@@ -119,7 +117,7 @@ export const TechStack = () => {
           scrollTrigger: {
             trigger: toolsListRef.current,
             start: "top 90%",
-            end: "bottom 80%",
+            end: "bottom 90%",
             scrub: 1.5,
           },
           duration: 5,
@@ -152,66 +150,26 @@ export const TechStack = () => {
         My tech stack
       </div>
 
-      <div className="flex justify-start items-center text-lg md:text-xl font-fixel-medium">
-        <div className="text-gray-500 border-2 border-gray-500 px-6 py-1 rounded-full">
-          Frameworks
-        </div>
+      <div className="flex justify-start items-center text-lg md:text-xl font-fixel-medium text-gray-400">
+        Frameworks
       </div>
 
-      {/*<div*/}
-      {/*  ref={frameworksListRef}*/}
-      {/*  className="w-full overflow-hidden pt-10 md:pt-12"*/}
-      {/*>*/}
-      {/*  <TechStackSwiper data={FRAMEWORKS} ref={frameworksRef} />*/}
-      {/*</div>*/}
-      <div
-        ref={frameworksListRef}
-        className="w-full pt-10 md:pt-12 relative min-h-96 flex justify-center items-center"
-      >
-        <div className="relative h-96">
-          {FRAMEWORKS.map((item, idx) => (
-            <div
-              key={item.name}
-              ref={(el) => (frameworksRef.current[idx] = el)}
-              className={classnames(
-                "absolute transition-transform duration-300",
-                idx === FRAMEWORKS.length - 1 ? "" : "hover:-translate-x-16",
-              )}
-              style={{
-                left: `${idx * 100 - (FRAMEWORKS.length * 100) / 2}px`,
-                top: `${idx * 20 - (FRAMEWORKS.length * 20) / 2}px`,
-                zIndex: FRAMEWORKS.length + idx,
-              }}
-            >
-              <TechStackBoxNew {...item} />
-            </div>
-          ))}
-        </div>
+      <div ref={frameworksListRef} className="w-full pt-10 md:pt-12 pb-32">
+        <TechStackSwiper data={FRAMEWORKS} ref={frameworksRef} />
       </div>
 
-      <div className="flex justify-start items-center text-lg md:text-xl font-fixel-medium pt-4 md:pt-8">
-        <div className="text-gray-500 border-2 border-gray-500 px-6 py-1 rounded-full">
-          Programming languages
-        </div>
+      <div className="flex justify-start items-center text-lg md:text-xl font-fixel-medium pt-4 md:pt-8 text-gray-400">
+        Programming languages
       </div>
-      <div
-        ref={languagesListRef}
-        className="w-full overflow-hidden pt-10 md:pt-12"
-      >
+      <div ref={languagesListRef} className="w-full pt-10 md:pt-12 pb-32">
         <TechStackSwiper data={PROGRAMMING_LANGUAGES} ref={languagesRef} />
       </div>
 
-      <div className="flex justify-start items-center text-lg md:text-xl font-fixel-medium pt-4 md:pt-8">
-        <div className="text-gray-500 border-2 border-gray-500 px-6 py-1 rounded-full">
-          Tools
-        </div>
+      <div className="flex justify-start items-center text-lg md:text-xl font-fixel-medium pt-4 md:pt-8 text-gray-400">
+        Tools
       </div>
-      <div ref={toolsListRef} className="w-full overflow-hidden pt-10 md:pt-12">
-        <TechStackSwiper
-          data={TOOLS}
-          ref={toolsRef}
-          classNames="!justify-start"
-        />
+      <div ref={toolsListRef} className="w-full pt-10 md:pt-12 pb-32">
+        <TechStackSwiper data={TOOLS} ref={toolsRef} />
       </div>
     </div>
   );
