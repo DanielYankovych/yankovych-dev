@@ -8,7 +8,7 @@ export const TechStackSwiper = forwardRef(({ data, classNames }, ref) => {
   return (
     <div
       className={classnames(
-        "w-full flex justify-center items-center flex-wrap gap-10",
+        "w-full flex justify-center items-center flex-wrap gap-6 md:gap-10",
         classNames,
       )}
     >

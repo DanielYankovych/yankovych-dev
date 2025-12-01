@@ -133,7 +133,7 @@ export const TechStack = () => {
     <div ref={sectionRef} className="w-full font-fixel-medium ">
       <div
         ref={paragraphRef}
-        className="w-full md:w-2/3 text-red-500 text-4xl md:text-5xl leading-tight font-fixel-extra-bold"
+        className="w-full md:w-2/3 text-red-500 text-3xl md:text-5xl leading-tight font-fixel-extra-bold"
       >
         <div className="w-full">
           Every project is unique. <br />
@@ -154,21 +154,27 @@ export const TechStack = () => {
         Frameworks
       </div>
 
-      <div ref={frameworksListRef} className="w-full pt-10 md:pt-12 pb-32">
+      <div
+        ref={frameworksListRef}
+        className="w-full pt-10 md:pt-12 pb-20 md:pb-32"
+      >
         <TechStackSwiper data={FRAMEWORKS} ref={frameworksRef} />
       </div>
 
       <div className="flex justify-start items-center pt-4 md:pt-8 text-gray-400">
         Programming languages
       </div>
-      <div ref={languagesListRef} className="w-full pt-10 md:pt-12 pb-32">
+      <div
+        ref={languagesListRef}
+        className="w-full pt-10 md:pt-12 pb-20 md:pb-32"
+      >
         <TechStackSwiper data={PROGRAMMING_LANGUAGES} ref={languagesRef} />
       </div>
 
       <div className="flex justify-start items-center pt-4 md:pt-8 text-gray-400">
         Tools
       </div>
-      <div ref={toolsListRef} className="w-full pt-10 md:pt-12 pb-32">
+      <div ref={toolsListRef} className="w-full pt-10 md:pt-12 pb-20 md:pb-32">
         <TechStackSwiper data={TOOLS} ref={toolsRef} />
       </div>
     </div>

@@ -4,13 +4,13 @@ export const TechStackBox = ({ name, classNames }) => {
   return (
     <div
       className={classnames(
-        "relative w-52 py-3 text-gray-500 border-2 border-gray-500 rounded-full",
+        "relative w-40 md:w-52 py-3 text-gray-500 border-2 border-gray-500 rounded-full",
         "flex justify-center items-center",
         "bg-light/10 backdrop-blur-xs",
         classNames,
       )}
     >
-      <div className="text-xl">#{name}</div>
+      <div className="text-lg md:text-xl">#{name}</div>
     </div>
   );
 };

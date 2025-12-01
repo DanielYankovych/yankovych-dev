@@ -63,7 +63,7 @@ export const WorkWay = () => {
     <div ref={sectionRef} className="w-full">
       <div
         ref={textRef}
-        className="w-full md:w-1/2 mx-auto text-center text-dark text-4xl md:text-5xl leading-tight"
+        className="w-full md:w-1/2 mx-auto text-center text-dark text-3xl md:text-5xl leading-tight"
       >
         What stays consistent is the way I work:
       </div>
@@ -85,7 +85,7 @@ export const WorkWay = () => {
 
       <div className="w-full pt-28 md:pt-32 pb-12 flex justify-end items-center">
         <div>
-          <div className="text-dark text-4xl md:text-5xl mb-4 md:mb-8">
+          <div className="text-dark text-3xl md:text-5xl mb-4 md:mb-8">
             Check my
           </div>
           <Button
