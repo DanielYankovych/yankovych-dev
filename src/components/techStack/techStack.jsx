@@ -130,10 +130,10 @@ export const TechStack = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full">
+    <div ref={sectionRef} className="w-full font-fixel-medium ">
       <div
         ref={paragraphRef}
-        className="w-full md:w-2/3 text-red-500 text-4xl md:text-5xl leading-tight"
+        className="w-full md:w-2/3 text-red-500 text-4xl md:text-5xl leading-tight font-fixel-extra-bold"
       >
         <div className="w-full">
           Every project is unique. <br />
@@ -145,12 +145,12 @@ export const TechStack = () => {
 
       <div
         ref={techStackRef}
-        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl md:-ml-1 leading-none py-12 md:pt-28 text-center"
+        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl md:-ml-1 leading-none py-12 md:pt-28 text-center font-fixel-extra-bold"
       >
         My tech stack
       </div>
 
-      <div className="flex justify-start items-center text-lg md:text-xl font-fixel-medium text-gray-400">
+      <div className="flex justify-start items-center text-gray-400">
         Frameworks
       </div>
 
@@ -158,14 +158,14 @@ export const TechStack = () => {
         <TechStackSwiper data={FRAMEWORKS} ref={frameworksRef} />
       </div>
 
-      <div className="flex justify-start items-center text-lg md:text-xl font-fixel-medium pt-4 md:pt-8 text-gray-400">
+      <div className="flex justify-start items-center pt-4 md:pt-8 text-gray-400">
         Programming languages
       </div>
       <div ref={languagesListRef} className="w-full pt-10 md:pt-12 pb-32">
         <TechStackSwiper data={PROGRAMMING_LANGUAGES} ref={languagesRef} />
       </div>
 
-      <div className="flex justify-start items-center text-lg md:text-xl font-fixel-medium pt-4 md:pt-8 text-gray-400">
+      <div className="flex justify-start items-center pt-4 md:pt-8 text-gray-400">
         Tools
       </div>
       <div ref={toolsListRef} className="w-full pt-10 md:pt-12 pb-32">

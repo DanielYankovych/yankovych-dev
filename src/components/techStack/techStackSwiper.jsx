@@ -14,7 +14,7 @@ export const TechStackSwiper = forwardRef(({ data, classNames }, ref) => {
     >
       {data.map((d, idx) => (
         <div key={idx + 1} ref={(el) => (ref.current[idx] = el)}>
-          <TechStackBox name={d.name} logo={d.logo} />
+          <TechStackBox name={d.name} />
         </div>
       ))}
     </div>

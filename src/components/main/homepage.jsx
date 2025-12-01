@@ -34,6 +34,22 @@ export const Homepage = () => {
     const ctx = gsap.context(() => {
       gsap.registerPlugin(ScrollTrigger);
 
+      const showCanvas = () => {
+        gsap.to(".homepage-canvas", {
+          opacity: 1,
+          duration: 0.6,
+          ease: "power2.out",
+        });
+      };
+
+      const hideCanvas = () => {
+        gsap.to(".homepage-canvas", {
+          opacity: 0,
+          duration: 0,
+          ease: "power2.out",
+        });
+      };
+
       const setBg = (color) => {
         gsap.to("body", {
           backgroundColor: color,
@@ -48,10 +64,12 @@ export const Homepage = () => {
         end: "bottom center",
         onEnter: () => {
           setBg("#131010");
+          hideCanvas();
           window.dispatchEvent(new Event("canvas-dark"));
         },
         onEnterBack: () => {
           setBg("#131010");
+          hideCanvas();
           window.dispatchEvent(new Event("canvas-dark"));
         },
       });
@@ -62,10 +80,12 @@ export const Homepage = () => {
         end: "bottom center",
         onEnter: () => {
           setBg("#F3F3F3");
+          showCanvas();
           window.dispatchEvent(new Event("canvas-light"));
         },
         onEnterBack: () => {
           setBg("#F3F3F3");
+          showCanvas();
           window.dispatchEvent(new Event("canvas-light"));
         },
       });
@@ -76,10 +96,12 @@ export const Homepage = () => {
         end: "bottom center",
         onEnter: () => {
           setBg("#F3F3F3");
+          showCanvas();
           window.dispatchEvent(new Event("canvas-light"));
         },
         onEnterBack: () => {
           setBg("#F3F3F3");
+          showCanvas();
           window.dispatchEvent(new Event("canvas-light"));
         },
       });
@@ -90,10 +112,12 @@ export const Homepage = () => {
         end: "bottom center",
         onEnter: () => {
           setBg("#131010");
+          hideCanvas();
           window.dispatchEvent(new Event("canvas-dark"));
         },
         onEnterBack: () => {
           setBg("#131010");
+          hideCanvas();
           window.dispatchEvent(new Event("canvas-dark"));
         },
       });

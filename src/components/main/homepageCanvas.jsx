@@ -155,6 +155,7 @@ export const HomepageCanvas = () => {
     <canvas
       ref={canvasRef}
       id="homepage-canvas"
+      className="homepage-canvas"
       style={{
         position: "fixed",
         inset: 0,
