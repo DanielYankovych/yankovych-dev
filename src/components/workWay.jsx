@@ -45,14 +45,22 @@ export const WorkWay = () => {
           scrollTrigger: {
             trigger: wordsSectionRef.current,
             start: "top 95%",
-            end: "bottom 85%",
+            end: "bottom 95%",
             scrub: 1,
           },
         })
         .fromTo(
           words,
-          { x: (i) => gsap.utils.wrap([150, -150])(i) },
-          { x: 0, ease: "none", stagger: 0.2 },
+          {
+            x: (i) => gsap.utils.wrap([-100, 100])(i),
+            // backgroundColor: "rgba(0, 0, 0, 1)",
+          },
+          {
+            x: 0,
+            // backgroundColor: "rgba(255,255,255,0.2)",
+            ease: "none",
+            stagger: 0.2,
+          },
         );
     });
 
@@ -70,7 +78,7 @@ export const WorkWay = () => {
 
       <div
         ref={wordsSectionRef}
-        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl leading-tight pt-16 text-center"
+        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl leading-tight pt-16 text-center grid grid-cols-1 md:grid-cols-2"
       >
         {WORK_WAY.map((word, idx) => (
           <div

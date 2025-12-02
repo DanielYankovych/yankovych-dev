@@ -150,29 +150,19 @@ export const TechStack = () => {
         My tech stack
       </div>
 
-      <div className="flex justify-start items-center text-sm">Frameworks</div>
+      <div className="text-lg md:text-xl opacity-20">Frameworks</div>
 
-      <div
-        ref={frameworksListRef}
-        className="w-full pt-10 md:pt-12 pb-20 md:pb-32"
-      >
+      <div ref={frameworksListRef} className="pt-10 md:pt-12 pb-20 md:pb-40">
         <TechStackSwiper data={FRAMEWORKS} ref={frameworksRef} />
       </div>
 
-      <div className="flex justify-start items-center pt-4 md:pt-8 text-sm">
-        Programming languages
-      </div>
-      <div
-        ref={languagesListRef}
-        className="w-full pt-10 md:pt-12 pb-20 md:pb-32"
-      >
+      <div className="text-lg md:text-xl opacity-20">Programming languages</div>
+      <div ref={languagesListRef} className="pt-10 md:pt-12 pb-20 md:pb-40">
         <TechStackSwiper data={PROGRAMMING_LANGUAGES} ref={languagesRef} />
       </div>
 
-      <div className="flex justify-start items-center pt-4 md:pt-8 text-sm">
-        Tools
-      </div>
-      <div ref={toolsListRef} className="w-full pt-10 md:pt-12 pb-20 md:pb-32">
+      <div className="text-lg md:text-xl opacity-20">Tools</div>
+      <div ref={toolsListRef} className="pt-10 md:pt-12 pb-20 md:pb-40">
         <TechStackSwiper data={TOOLS} ref={toolsRef} />
       </div>
     </div>
