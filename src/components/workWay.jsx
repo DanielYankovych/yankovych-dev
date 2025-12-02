@@ -45,7 +45,7 @@ export const WorkWay = () => {
           scrollTrigger: {
             trigger: wordsSectionRef.current,
             start: "top 95%",
-            end: "bottom 95%",
+            end: "bottom 75%",
             scrub: 1,
           },
         })
@@ -53,11 +53,9 @@ export const WorkWay = () => {
           words,
           {
             x: (i) => gsap.utils.wrap([-100, 100])(i),
-            color: "#131010",
           },
           {
             x: 0,
-            color: "#B72929",
             ease: "none",
             stagger: 0.2,
           },
