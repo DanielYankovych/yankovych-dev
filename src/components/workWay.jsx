@@ -45,14 +45,20 @@ export const WorkWay = () => {
           scrollTrigger: {
             trigger: wordsSectionRef.current,
             start: "top 95%",
-            end: "bottom 85%",
+            end: "bottom 75%",
             scrub: 1,
           },
         })
         .fromTo(
           words,
-          { x: (i) => gsap.utils.wrap([150, -150])(i) },
-          { x: 0, ease: "none", stagger: 0.2 },
+          {
+            x: (i) => gsap.utils.wrap([-100, 100])(i),
+          },
+          {
+            x: 0,
+            ease: "none",
+            stagger: 0.2,
+          },
         );
     });
 
@@ -63,14 +69,14 @@ export const WorkWay = () => {
     <div ref={sectionRef} className="w-full">
       <div
         ref={textRef}
-        className="w-full md:w-1/2 mx-auto text-center text-dark text-4xl md:text-5xl leading-tight"
+        className="w-full md:w-1/2 mx-auto text-center text-dark text-3xl md:text-5xl leading-tight"
       >
         What stays consistent is the way I work:
       </div>
 
       <div
         ref={wordsSectionRef}
-        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl leading-tight pt-16 text-center"
+        className="text-dark text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl leading-tight pt-16 text-center grid grid-cols-1"
       >
         {WORK_WAY.map((word, idx) => (
           <div
@@ -85,7 +91,7 @@ export const WorkWay = () => {
 
       <div className="w-full pt-28 md:pt-32 pb-12 flex justify-end items-center">
         <div>
-          <div className="text-dark text-4xl md:text-5xl mb-4 md:mb-8">
+          <div className="text-dark text-3xl md:text-5xl mb-4 md:mb-8">
             Check my
           </div>
           <Button
