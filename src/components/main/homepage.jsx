@@ -45,7 +45,7 @@ export const Homepage = () => {
       const hideCanvas = () => {
         gsap.to(".homepage-canvas", {
           opacity: 0,
-          duration: 0,
+          duration: 0.6,
           ease: "power2.out",
         });
       };
@@ -64,12 +64,12 @@ export const Homepage = () => {
         end: "bottom center",
         onEnter: () => {
           setBg("#131010");
-          hideCanvas();
+          showCanvas();
           window.dispatchEvent(new Event("canvas-dark"));
         },
         onEnterBack: () => {
           setBg("#131010");
-          hideCanvas();
+          showCanvas();
           window.dispatchEvent(new Event("canvas-dark"));
         },
       });

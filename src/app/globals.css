@@ -10,8 +10,6 @@
   --font-fixel-bold: var(--font-fixel-bold);
   --font-fixel-extra-bold: var(--font-fixel-extra-bold);
   --color-red-500: oklch(0.5122 0.1786 26.25);
-  --color-gray-400: oklch(0.7858 0 0);
-  --color-gray-500: oklch(0.3132 0 0);
   --color-dark: #131010;
   --color-light: #f3f3f3;
   --color-sidebar-ring: var(--sidebar-ring);

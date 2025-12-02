@@ -130,7 +130,7 @@ export const TechStack = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full font-fixel-medium ">
+    <div ref={sectionRef} className="w-full font-fixel-medium text-dark">
       <div
         ref={paragraphRef}
         className="w-full md:w-2/3 text-red-500 text-3xl md:text-5xl leading-tight font-fixel-extra-bold"
@@ -150,9 +150,7 @@ export const TechStack = () => {
         My tech stack
       </div>
 
-      <div className="flex justify-start items-center text-gray-400">
-        Frameworks
-      </div>
+      <div className="flex justify-start items-center text-sm">Frameworks</div>
 
       <div
         ref={frameworksListRef}
@@ -161,7 +159,7 @@ export const TechStack = () => {
         <TechStackSwiper data={FRAMEWORKS} ref={frameworksRef} />
       </div>
 
-      <div className="flex justify-start items-center pt-4 md:pt-8 text-gray-400">
+      <div className="flex justify-start items-center pt-4 md:pt-8 text-sm">
         Programming languages
       </div>
       <div
@@ -171,7 +169,7 @@ export const TechStack = () => {
         <TechStackSwiper data={PROGRAMMING_LANGUAGES} ref={languagesRef} />
       </div>
 
-      <div className="flex justify-start items-center pt-4 md:pt-8 text-gray-400">
+      <div className="flex justify-start items-center pt-4 md:pt-8 text-sm">
         Tools
       </div>
       <div ref={toolsListRef} className="w-full pt-10 md:pt-12 pb-20 md:pb-32">
